@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>XPlay2Class</class>
- <widget class="QWidget" name="XPlay2Class">
+ <class>XPlayClass</class>
+ <widget class="QWidget" name="XPlayClass">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>XPlay2</string>
+   <string>XPlay</string>
   </property>
   <widget class="XVideoWidget" name="video">
    <property name="geometry">
@@ -79,14 +79,12 @@
    <header>XSlider.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="XPlay2.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>openFile</sender>
    <signal>clicked()</signal>
-   <receiver>XPlay2Class</receiver>
+   <receiver>XPlayClass</receiver>
    <slot>OpenFile()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -102,7 +100,7 @@
   <connection>
    <sender>isPlay</sender>
    <signal>clicked()</signal>
-   <receiver>XPlay2Class</receiver>
+   <receiver>XPlayClass</receiver>
    <slot>PlayOrPause()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -118,7 +116,7 @@
   <connection>
    <sender>playPos</sender>
    <signal>sliderPressed()</signal>
-   <receiver>XPlay2Class</receiver>
+   <receiver>XPlayClass</receiver>
    <slot>SliderPress()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -134,7 +132,7 @@
   <connection>
    <sender>playPos</sender>
    <signal>sliderReleased()</signal>
-   <receiver>XPlay2Class</receiver>
+   <receiver>XPlayClass</receiver>
    <slot>SliderRelease()</slot>
    <hints>
     <hint type="sourcelabel">

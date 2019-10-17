@@ -29,7 +29,7 @@ public slots:
 	void SliderRelease();
 
 private:
-	Ui::XPlay2Class ui;
+	Ui::XPlayClass ui;
 };
 
 
