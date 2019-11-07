@@ -1,15 +1,15 @@
-#pragma once
+#ifndef XVIDEO_WIDGET_H
+#define XVIDEO_WIDGET_H
+
+#include "ivideo_call.h"
 
 #include <QOpenGLWidget>
 #include <QOpenGLFunctions>
 #include <QGLShaderProgram>
 #include <mutex>
 
-#include "IVideoCall.h"
-
 
 struct AVFrame;
-
 class XVideoWidget : public QOpenGLWidget, protected QOpenGLFunctions, public IVideoCall
 {
 	Q_OBJECT
@@ -45,3 +45,7 @@ private:
 	int width = 240;
 	int height = 128;
 };
+
+#endif // !XVIDEO_WIDGET_H
+
+

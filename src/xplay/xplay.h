@@ -1,4 +1,6 @@
-#pragma once
+#ifndef XPLAY_H
+#define XPLAY_H
+
 
 #include <QtWidgets/QWidget>
 #include "ui_XPlay.h"
@@ -32,4 +34,5 @@ private:
 	Ui::XPlayClass ui;
 };
 
+#endif // !XPLAY_H
 

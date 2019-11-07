@@ -1,7 +1,7 @@
-#include "XAudioThread.h"
-#include "XDecode.h"
-#include "XAudioPlay.h"
-#include "XResample.h"
+#include "xaudio_thread.h"
+#include "xdecode.h"
+#include "xaudio_play.h"
+#include "xresample.h"
 
 #include <iostream>
 

@@ -1,10 +1,12 @@
-#pragma once
+#ifndef XRESAMPLE_H
+#define XRESAMPLE_H
+
+
 #include <mutex>
 
 struct AVCodecParameters;
 struct SwrContext;
 struct AVFrame;
-
 class XResample
 {
 public:
@@ -26,4 +28,6 @@ protected:
 	std::mutex mux;
 	SwrContext *actx = nullptr;
 };
+
+#endif // !XRESAMPLE_H
 

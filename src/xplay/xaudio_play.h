@@ -1,4 +1,7 @@
-#pragma once
+#ifndef XAUDIO_PLAY_H
+#define XAUDIO_PLAY_H
+
+
 class XAudioPlay
 {
 public:
@@ -25,4 +28,6 @@ public:
 	int sampleSize = 16;
 	int channels = 2;
 };
+
+#endif // !XAUDIO_PLAY_H
 

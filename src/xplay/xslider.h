@@ -1,8 +1,10 @@
-#pragma once
+#ifndef XSLIDER_H
+#define XSLIDER_H
 
 #include <QObject>
 #include <QMouseEvent>
 #include <QSlider>
+
 
 class XSlider : public QSlider
 {
@@ -14,3 +16,6 @@ public:
 
 	void mousePressEvent(QMouseEvent *e) override;
 };
+
+#endif // !XSLIDER_H
+

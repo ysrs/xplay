@@ -1,4 +1,4 @@
-#include "XAudioPlay.h"
+#include "xaudio_play.h"
 #include <QAudioFormat>
 #include <QAudioOutput>
 #include <mutex>

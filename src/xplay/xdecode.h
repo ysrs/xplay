@@ -1,4 +1,5 @@
-#pragma once
+#ifndef XDECODE_H
+#define XDECODE_H
 
 #include <mutex>
 
@@ -7,7 +8,6 @@ struct AVCodecParameters;
 struct AVCodecContext;
 struct AVPacket;
 struct AVFrame;
-
 
 extern void XFreePacket(AVPacket **pkt);
 extern void XFreeFrame(AVFrame **frame);
@@ -36,4 +36,6 @@ protected:
 	AVCodecContext *codec = nullptr;
 	std::mutex mux;
 };
+
+#endif // !XDECODE_H
 

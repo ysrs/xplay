@@ -1,5 +1,5 @@
-#include "XDecodeThread.h"
-#include "XDecode.h"
+#include "xdecode_thread.h"
+#include "xdecode.h"
 
 
 XDecodeThread::XDecodeThread()

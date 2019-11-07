@@ -1,12 +1,10 @@
-#include "XDemuxThread.h"
+#include "xdemux_thread.h"
+#include "xdemux.h"
+#include "XDecode.h"
+#include "xvideo_thread.h"
+#include "xaudio_thread.h"
 
 #include <iostream>
-
-
-#include "XDemux.h"
-#include "XDecode.h"
-#include "XVideoThread.h"
-#include "XAudioThread.h"
 
 
 using namespace std;

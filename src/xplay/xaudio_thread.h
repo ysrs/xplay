@@ -1,14 +1,15 @@
-#pragma once
+#ifndef XAUDIO_THREAD_H
+#define XAUDIO_THREAD_H
+
 #include <QThread>
 #include <mutex>
 #include <list>
 
-#include "XDecodeThread.h"
+#include "xdecode_thread.h"
 
 
 class XAudioPlay;
 class XResample;
-
 class XAudioThread : public XDecodeThread
 {
 public:
@@ -34,4 +35,6 @@ protected:
 	XAudioPlay *ap = nullptr;
 	XResample *res = nullptr;
 };
+
+#endif // !XAUDIO_THREAD_H
 

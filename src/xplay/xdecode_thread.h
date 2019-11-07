@@ -1,6 +1,7 @@
-#pragma once
-#include <QThread>
+#ifndef XDECODE_THREAD_H
+#define XDECODE_THREAD_H
 
+#include <QThread>
 #include <mutex>
 #include <list>
 
@@ -8,7 +9,6 @@
 struct AVCodecParameters;
 struct AVPacket;
 class XDecode;
-
 class XDecodeThread : public QThread
 {
 public:
@@ -32,4 +32,6 @@ protected:
 	std::mutex mux;
 	XDecode *decode = nullptr;
 };
+
+#endif // !XDECODE_THREAD_H
 

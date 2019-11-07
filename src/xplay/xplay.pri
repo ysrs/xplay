@@ -26,7 +26,7 @@ SOURCES += ./main.cpp \
     ./XDecodeThread.cpp \
     ./XDemux.cpp \
     ./XDemuxThread.cpp \
-    ./XPlay.cpp \
+    ./xplay.cpp \
     ./XResample.cpp \
     ./XSlider.cpp \
     ./XVideoThread.cpp \

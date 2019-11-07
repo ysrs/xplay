@@ -1,4 +1,4 @@
-#include "XVideoThread.h"
+#include "xvideo_thread.h"
 #include "XDecode.h"
 
 #include <iostream>

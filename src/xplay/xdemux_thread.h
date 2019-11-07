@@ -1,8 +1,11 @@
-#pragma once
+#ifndef XDEMUX_THREAD_H
+#define XDEMUX_THREAD_H
+
+
 #include <QThread>
 #include <mutex>
 
-#include "IVideoCall.h"
+#include "ivideo_call.h"
 
 
 class XDemux;
@@ -39,4 +42,6 @@ protected:
 	XVideoThread *vt = nullptr;
 	XAudioThread *at = nullptr;
 };
+
+#endif // !XDEMUX_THREAD_H
 

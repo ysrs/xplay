@@ -210,39 +210,39 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="XAudioPlay.cpp" />
-    <ClCompile Include="XAudioThread.cpp" />
-    <ClCompile Include="XDecode.cpp" />
-    <ClCompile Include="XDecodeThread.cpp" />
-    <ClCompile Include="XDemux.cpp" />
-    <ClCompile Include="XDemuxThread.cpp" />
-    <ClCompile Include="XPlay.cpp" />
-    <ClCompile Include="XResample.cpp" />
-    <ClCompile Include="XSlider.cpp" />
-    <ClCompile Include="XVideoThread.cpp" />
-    <ClCompile Include="XVideoWidget.cpp" />
+    <ClCompile Include="xaudio_play.cpp" />
+    <ClCompile Include="xaudio_thread.cpp" />
+    <ClCompile Include="xdecode.cpp" />
+    <ClCompile Include="xdecode_thread.cpp" />
+    <ClCompile Include="xdemux.cpp" />
+    <ClCompile Include="xdemux_thread.cpp" />
+    <ClCompile Include="xplay.cpp" />
+    <ClCompile Include="xresample.cpp" />
+    <ClCompile Include="xslider.cpp" />
+    <ClCompile Include="xvideo_thread.cpp" />
+    <ClCompile Include="xvideo_widget.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="XPlay.h" />
+    <QtMoc Include="xplay.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="XPlay.ui" />
+    <QtUic Include="xplay.ui" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="XPlay.qrc" />
+    <QtRcc Include="xplay.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IVideoCall.h" />
-    <ClInclude Include="XAudioPlay.h" />
-    <ClInclude Include="XAudioThread.h" />
-    <ClInclude Include="XDecode.h" />
-    <ClInclude Include="XDecodeThread.h" />
-    <ClInclude Include="XDemux.h" />
-    <ClInclude Include="XDemuxThread.h" />
-    <ClInclude Include="XResample.h" />
-    <QtMoc Include="XSlider.h" />
-    <ClInclude Include="XVideoThread.h" />
-    <QtMoc Include="XVideoWidget.h" />
+    <ClInclude Include="ivideo_call.h" />
+    <ClInclude Include="xaudio_play.h" />
+    <ClInclude Include="xaudio_thread.h" />
+    <ClInclude Include="xdecode.h" />
+    <ClInclude Include="xdecode_thread.h" />
+    <ClInclude Include="xdemux.h" />
+    <ClInclude Include="xdemux_thread.h" />
+    <ClInclude Include="xresample.h" />
+    <QtMoc Include="xslider.h" />
+    <ClInclude Include="xvideo_thread.h" />
+    <QtMoc Include="xvideo_widget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

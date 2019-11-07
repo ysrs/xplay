@@ -1,4 +1,6 @@
-#pragma once
+#ifndef XDEMUX_H
+#define XDEMUX_H
+
 #include <mutex>
 
 
@@ -46,4 +48,6 @@ protected:
 	int audioStream = 0;
 	int videoStream = 1;
 };
+
+#endif // !XDEMUX_H
 

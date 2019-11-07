@@ -1,10 +1,9 @@
 ﻿#pragma execution_character_set("utf-8")
-
 #include "XPlay.h"
+#include "xdemux_thread.h"
+
 #include <QFileDialog>
 #include <QMessageBox>
-
-#include "XDemuxThread.h"
 
 
 static XDemuxThread dt;

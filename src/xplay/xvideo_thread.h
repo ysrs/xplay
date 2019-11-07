@@ -1,9 +1,11 @@
-#pragma once
+#ifndef XVIDEO_THREAD_H
+#define XVIDEO_THREAD_H
+
 #include <mutex>
 #include <list>
 
-#include "IVideoCall.h"
-#include "XDecodeThread.h"
+#include "ivideo_call.h"
+#include "xdecode_thread.h"
 
 
 // 解码和显示视频
@@ -29,4 +31,6 @@ protected:
 	std::mutex vmux;
 	IVideoCall *call = nullptr;
 };
+
+#endif // !XVIDEO_THREAD_H
 

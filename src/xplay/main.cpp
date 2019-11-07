@@ -3,14 +3,13 @@
 #include <QThread>
 #include <iostream>
 
-#include "XDemux.h"
-#include "XDecode.h"
-#include "XResample.h"
-#include "XAudioPlay.h"
-#include "XAudioThread.h"
-#include "XVideoThread.h"
-
-#include "XDemuxThread.h"
+#include "xdemux.h"
+#include "xdecode.h"
+#include "xresample.h"
+#include "xaudio_play.h"
+#include "xaudio_thread.h"
+#include "xvideo_thread.h"
+#include "xdemux_thread.h"
 
 
 
