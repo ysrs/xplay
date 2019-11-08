@@ -4,85 +4,85 @@
 
 XDecodeThread::XDecodeThread()
 {
-	// 打开解码器
-	if (!decode)
-	{
-		decode = new XDecode();
-	}
+    // 打开解码器
+    if (!decode_)
+    {
+        decode_ = new XDecode();
+    }
 }
 
 
 XDecodeThread::~XDecodeThread()
 {
-	// 等待线程退出
-	isExit = true;
-	wait();
+    // 等待线程退出
+    isExit = true;
+    wait();
 }
 
 
 void XDecodeThread::Close()
 {
-	Clear();
-	
-	// 等待线程退出
-	isExit = true;
-	wait();
+    Clear();
 
-	mux.lock();
-	decode->Close();
-	delete decode;
-	decode = nullptr;
-	mux.unlock();
+    // 等待线程退出
+    isExit = true;
+    wait();
+
+    mutex_.lock();
+    decode_->Close();
+    delete decode_;
+    decode_ = nullptr;
+    mutex_.unlock();
 }
 
 void XDecodeThread::Clear()
 {
-	mux.lock();
-	decode->Clear();
-	while (!packs.empty())
-	{
-		AVPacket *pkt = packs.front();
-		XFreePacket(&pkt);
-		packs.pop_front();
-	}
-	mux.unlock();
+    mutex_.lock();
+    decode_->Clear();
+    while (!packs_.empty())
+    {
+        AVPacket *pkt = packs_.front();
+        XFreePacket(&pkt);
+        packs_.pop_front();
+    }
+    mutex_.unlock();
 }
 
 void XDecodeThread::Push(AVPacket *pkt)
 {
-	if (!pkt)
-	{
-		return;
-	}
+    if (!pkt)
+    {
+        return;
+    }
 
-	// 阻塞
-	while (!isExit)
-	{
-		mux.lock();
-		if (packs.size() < maxList)
-		{
-			packs.push_back(pkt);
-			mux.unlock();
-			break;
-		}
-		mux.unlock();
-		msleep(1);
-	}
+    // 阻塞
+    while (!isExit)
+    {
+        mutex_.lock();
+        if (packs_.size() < maxList)
+        {
+            packs_.push_back(pkt);
+            mutex_.unlock();
+            break;
+        }
+        mutex_.unlock();
+        msleep(1);
+    }
 }
 
 AVPacket *XDecodeThread::Pop()
 {
-	mux.lock();
+    mutex_.lock();
 
-	if (packs.empty())
-	{
-		mux.unlock();
-		return nullptr;
-	}
-	AVPacket *pkt = packs.front();
-	packs.pop_front();
-	mux.unlock();
+    if (packs_.empty())
+    {
+        mutex_.unlock();
+        return nullptr;
+    }
+    AVPacket *pkt = packs_.front();
+    packs_.pop_front();
+    mutex_.unlock();
 
-	return pkt;
+    return pkt;
 }
 

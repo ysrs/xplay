@@ -8,13 +8,13 @@
 
 class XSlider : public QSlider
 {
-	Q_OBJECT
+    Q_OBJECT
 
 public:
-	XSlider(QWidget *parent = nullptr);
-	~XSlider();
+    XSlider(QWidget *parent = nullptr);
+    ~XSlider();
 
-	void mousePressEvent(QMouseEvent *e) override;
+    void mousePressEvent(QMouseEvent *e) override;
 };
 
 #endif // !XSLIDER_H
