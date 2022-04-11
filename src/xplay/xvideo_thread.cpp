@@ -36,19 +36,7 @@ void XVideoThread::run()
             continue;
         }
 
-        // 没有数据
-        //if (packs.empty() || !decode)
-        //{
-        //	vmux.unlock();
-        //	msleep(1);
-        //	continue;
-        //}
-        //
-        //AVPacket *pkt = packs.front();
-        //packs.pop_front();
-
         AVPacket *pkt = Pop();
-
 
         bool re = decode_->Send(pkt);
         if (!re)

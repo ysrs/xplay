@@ -39,13 +39,13 @@ void main(void)
 // 顶点shader
 const char *vString = GET_STR(
     attribute vec4 vertexIn;
-attribute vec2 textureIn;
-varying vec2 textureOut;
-void main(void)
-{
-    gl_Position = vertexIn;
-    textureOut = textureIn;
-}
+    attribute vec2 textureIn;
+    varying vec2 textureOut;
+    void main(void)
+    {
+        gl_Position = vertexIn;
+        textureOut = textureIn;
+    }
 );
 
 // 准备yuv数据
@@ -208,30 +208,10 @@ void XVideoWidget::initializeGL()
     unis[2] = program.uniformLocation("tex_v");
 
     mux.unlock();
-
-    //fp = fopen("out240x128.yuv", "rb");
-    //if (!fp)
-    //{
-    //	qDebug() << "out240x128.yuv file open failed!";
-    //}
-
-    //// 启动定时器
-    //QTimer *ti = new QTimer(this);
-    //connect(ti, SIGNAL(timeout()), this, SLOT(update()));
-    //ti->start(40);
 }
 
 void XVideoWidget::paintGL()
 {
-    //if (feof(fp))
-    //{
-    //	fseek(fp, 0, SEEK_SET);
-    //}
-
-    //fread(datas[0], 1, width*height, fp);
-    //fread(datas[1], 1, width*height / 4, fp);
-    //fread(datas[2], 1, width*height / 4, fp);
-
     mux.lock();
 
     glActiveTexture(GL_TEXTURE0);
