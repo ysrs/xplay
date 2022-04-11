@@ -71,12 +71,12 @@
   <customwidget>
    <class>XVideoWidget</class>
    <extends>QOpenGLWidget</extends>
-   <header>XVideoWidget.h</header>
+   <header>xvideo_widget.h</header>
   </customwidget>
   <customwidget>
    <class>XSlider</class>
    <extends>QSlider</extends>
-   <header>XSlider.h</header>
+   <header>xslider.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
